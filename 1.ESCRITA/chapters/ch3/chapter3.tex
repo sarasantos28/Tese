@@ -1,0 +1,429 @@
+% Chapter 3
+
+\chapter{Teoria de Antenas} % Main chapter title
+\label{chap:Chapter3} % For referencing the chapter elsewhere, use \ref{chap:Chapter3} 
+
+%----------------------------------------------------------------------------------------
+\section{Teoria Básica de Antenas}
+Uma antena é definida como "um dispositivo geralmente metálico (com haste ou fio) para irradiar ou receber ondas de rádio" \parencite{Balanis2016}, ou seja, uma antena, é o dispositivo que permite a transição entre o meio que a rodeia e o equipamento, que se pode observar na Figura \ref{fig:antena transicao}. 
+Este dispositivo é um transdutor que converte energia elétrica em ondas eletromagnéticas ou vice versa, sendo que é uma antena de transmissão, se converter um sinal elétrico num sinal eletromagnético e é uma antena de receção, se converter um sinal eletromagnético em sinal elétrico. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/Antenna_transicao}
+\caption[Antena como meio de transição]{Antena como um meio de transição (Figura 1.1 - \cite{Balanis2016})}
+\label{fig:antena transicao}
+\end{figure}
+
+\subsection{Tipos de Antenas}
+Neste subcapítulo irá ser introduzido de uma forma breve, os vário tipos de antenas, a sua utilização e vantagens entre estes. 
+
+\subsection*{Antenas de Fio}
+Estas antenas são umas das mais antigas, que apresentam uma configuração mais simples, como se pode observar na Figura \ref{fig:wire antenna}, sendo apenas constituídas por um fio que pode variar na sua dimensão e na sua forma e ainda podem ser utilizadas nas mais variadas aplicações. Podem tomar uma forma aleatória, desde um fio direito (dipolo) até um fio com as mais diversas formas. \par 
+As antenas de fio podem ser encontradas nos mais variados locais, desde aeronaves, carros ou navios a edifícios.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/wire_antenna}
+\caption[Antena de Fio]{Exemplos de vários tipos de antenas de fio (Figura 1.3 - \cite{Balanis2016})}
+\label{fig:wire antenna}
+\end{figure}
+
+\subsection*{Antenas de Abertura}
+Os campos no fim de um guia de ondas aberto não são uniformes devido a esta mesma abertura, assim, para este caso, assume-se que os campos são iguais a como se o guia de ondas continuasse fechado. As antenas de abertura entram quando se pretende aumentar a diretividade à saída do guia, abrindo as extremidades do mesmo de forma a dar uma forma como se observa na Figura \ref{fig:aperture antenna2}. Este tipo de antenas, em especifico as antenas de abertura piramidais, são utilizadas para alimentar ou calibrar grandes antenas de prato.\par
+Assim sendo, as antenas de abertura são utilizadas para frequências mais elevadas, especificamente em frequências de micro-ondas e podem ser aplicadas nas mais variadas formas geométricas, como retangulares, elípticas, circulares, piramidais, entre outras.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/aperture_antenna2}
+\caption[Antena de Abertura]{Antenas de abertura no plano H, E e piramidal}
+\label{fig:aperture antenna2}
+\end{figure}
+
+
+\subsection*{Antenas de \textit{Microstrip}}
+Uma antena \textit{microstrip}, conhecida como antena impressa, é um tipo de antena que está inserida numa placa de circuito impresso e funciona como uma antena interna.\par
+Hoje em dia são utilizadas em aplicações comerciais, tendo como as suas maiores vantagens o facto de serem baratas e simples de manufaturar e apresentarem um tamanho reduzido. Este tipo de antenas são aplicadas em frequências \gls{UHF}.\par 
+A sua construção consiste num \textit{patch} metálico sobre um substrato. Este \textit{patch} pode apresentar as mais variadas formas como representado na Figura \ref{fig:microstrip}, sendo as retangulares e circulares as mais comuns. Têm ainda as vantagens de serem impressas em superfícies com as mais variadas formas, sendo robustas e versáteis nos parâmetros da sua frequência de ressonância, polarização e impedância (\cite{Balanis2016}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/microstrip}
+\caption[Antena \textit{Microstrip}]{Exemplos de duas configurações de \textit{patches} diferentes (Figura 1.5 - \cite{Balanis2016})}
+\label{fig:microstrip}
+\end{figure}
+
+\subsection*{Antenas de Matrizes}
+As antenas de matrizes surgem nas aplicações em que é necessário mais que um elemento. Consegue-se assim agrupar vários elementos de forma a obter as características pretendidas. Algumas alterações às caraterísticas que se conseguem com este tipo de antenas antenas são o aumento de ganho, alterar o diagrama de radiação, determinar a direção de chegada de um sinal ou maximizar o \gls{SINR}\footnote{\gls{SINR} é um indicador de qualidade de transmissão ajustado a comunicações móveis devido à interferência de outros utilizadores ser mais significativa \parencite{Jeske2004}.}.
+
+\subsection*{Antenas de Lente}
+Este tipo de antenas utiliza as propriedades de convergência e divergência das lentes para a receção ou transmissão de sinal. O tamanho da lente a ser utilizada depende da frequência - quanto maior for a frequência, menor a lente. Dito isto, é mais favorável usar este tipo de antenas em frequências mais altas, visto que a lente será menor. As suas aplicações são semelhantes às das refletoras parabólicas, especificamente quando usadas em frequências mais altas e que necessitem de mais largura de banda.
+
+\subsection*{Antenas Refletoras}
+As antenas refletoras existem desde o final do século XIX, no entanto começaram a ser aplicadas em radares na Segunda Guerra Mundial e a partir do final do século XX em comunicações espaciais. Estas aplicações devem-se à sua capacidade de transmissões a grandes distâncias. Podem-se apresentar nas mais diversas formas, como plano refletor, refletor curvilíneo, entre outros.\par 
+O seu modo de funcionamento baseia-se na convergência da energia numa direção como demonstrado na Figura \ref{fig:reflector}, o que leva, para além de um grande alcance, a uma grande diretividade.
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/reflector}
+\caption[Antena Refletora]{Funcionamento de uma Antena Refletora}
+\label{fig:reflector}
+\end{figure}
+
+\subsection{Parâmetros Fundamentais}
+Neste subcapítulo vão ser discutidos os parâmetros mais relevantes que estão relacionados com o funcionamento de uma antena e com a sua \textit{performance}. Grande parte dos parâmetros estão definidos no IEEE 1983 Standard Definitions for Antennas and Propagation.
+
+\subsection*{Diagrama de Radiação}
+Um diagrama de radiação é a função ou representação gráfica que descreve as propriedades espaciais de radiação de uma antena. É de extrema importância conhecer este padrão de radiação de uma antena e poder controla-lo, visto que a distribuição de energia eletromagnética, se for mal dimensionada, pode comprometer o projeto. \par 
+
+A manipulação do diagrama de radiação de uma antena é dependente do objetivo da mesma. Podemos ter como finalidade um diagrama de radiação que seja direcional (Figura \ref{fig:direcional}), como numa ligação ponto a ponto, ou podemos como finalidade, um diagrama de radiação omnidirecional (Figura \ref{fig:omnidirecional}), ou seja, que radia, idealmente, com igual intensidade para todas as direções.\par
+
+Para este efeito são utilizadas coordenadas esféricas ($r$, $\varphi$ e $\theta$), sendo que a antena se encontra na origem do referencial. A propriedade mais relevante nos diagramas de radiação é a distribuição espacial, em duas ou três dimensões, da energia radiada em função da posição do observador de acordo com um azimute ($\theta$ constante).\par 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/matlab_ad1}
+\caption[Diagrama de radiação direcional]{Diagrama de radiação direcional - Corneta de guia de ondas dimensionada para 1GHz (MATLAB Antenna Designer Toolkit)}
+\label{fig:direcional}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/matlab_ad2}
+\caption[Diagrama de radiação omnidirecional]{Diagrama de radiação omnidirecional - Dipolo dimensionado para 2GHz (MATLAB Antenna Designer Toolkit)}
+\label{fig:omnidirecional}
+\end{figure}
+
+Os lóbulos são um dos parâmetros fundamentais de um diagrama de radiação, que representam a energia radiada numa direção relativamente ao transmissor e podem ser classificados em lóbulos principais, secundários, laterais e posteriores (Figura \ref{fig:elem_carat_dg}). O lóbulo principal é o lóbulo que contém a direção da radiação máxima, que no caso da Figura \ref{fig:elem_carat_dg}, está definido no sentido do eixo dos zz. Os lóbulos secundários são todos os lóbulos expecto o principal. Os lóbulos laterais são todos os que radiam energia para qualquer direção que não seja a pretendida. Os lóbulos posteriores contêm a energia que é radiada num ângulo de 180$^{\circ}$ em relação à direção do feixe da antena. \par 
+
+A largura de feixe a meia potência (\gls{HPBW}) e a largura de feixe ao primeiro nulo (\gls{FNBW}) estão relacionadas com a capacidade de resolução da antena, ou seja, a sua capacidade de distinguir dois alvos. O critério para distinguir dois alvos é que a \gls{HPBW} seja aproximadamente \gls{FNBW}/2, isto é, se dois alvos estiverem separadas por distâncias angulares iguais ou superiores a \gls{HPBW}$\approx$\gls{FNBW}/2 de uma antena, esta consegue distingui-los \parencite{Kraus1988}. Os fatores que afetam a largura de feixe são o comprimento de onda ($\lambda$), a forma do diagrama de radiação e as dimensões da antena. \par 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/elem_carat_dg}
+\caption[Elementos caraterísticos do diagrama de radiação]{Elementos caraterísticos do diagrama de radiação}
+\label{fig:elem_carat_dg}
+\end{figure}
+
+Os diagramas de radiação podem ser classificados quanto à diretividade em que as antenas radiam. Um radiador isotrópico é definido com uma antena hipotética e sem perdas que radia igualmente em todas as direções e é normalmente tomado como referência para exprimir a diretividade de antenas. o radiador direcional é caracterizado por radiar ondas eletromagnéticas em determinadas direções e o radiador omnidirecional radia energia de igual forma em todas as direções \parencite{Balanis2016}.
+
+\subsubsection*{Planos Principais}
+Para antenas com polarização linear, discutido com mais detalhe no subcapítulo Polarização, consideram-se os seguintes planos:
+\begin{itemize}
+\item Plano E: Definido pelo plano que contém o vetor do campo elétrico e a direção da máxima radiação;
+\item Plano H: Definido pelo plano que contém o vetor do campo magnético e a direção da máxima radiação.
+\end{itemize}
+Os eixos do sistemas de coordenadas são escolhidos por forma a que pelo menos um dos planos referido coincidas com os planos do referencial, no entanto, há casos em que pode ser mais favorável escolher outro sistema de coordenadas.
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/campoEH_piramidal}
+\caption[Campos E e H de um diagrama de radiação de uma antena]{Campos E e H de um diagrama de radiação de uma antena}
+\label{fig:campoEH_piramidal}
+\end{figure}
+
+\subsubsection*{Regiões de Campo}
+De forma a identificar a estrutura do espaço circundante da antena, este é dividido em três regiões \parencite{Kraus1988}:
+\begin{itemize}
+\item Região reativa do campo próximo: Definida com a porção do espaço imediatamente em redor da antena, onde predomina o campo reativo;
+\item Região do campo próximo (\textit{Região de Fresnel}): Definida como a região da antena entre a região reativa do campo próximo e a região de \textit{Fraunhofer} onde predomina o campo radiado e a sua orientação espacial depende da distância à antena;
+\item Região do campo distante (\textit{Região de Fraunhofer}): Caraterizada pela região onde a distribuição angular do campo é maioritariamente independente da distância à antena.
+\end{itemize}
+
+Tipicamente, a forma diagrama de radiação é alterado consoante as regiões em que se encontra. Segundo a Figura \ref{fig:alt_tipicas_regioes} presente no artigo \cite{Y.RahmatL.WilliamsR.Yoccarino1995}, o diagrama é mais disperso e uniforme na região reativa do campo próximo. À medida em que a distância à antena aumenta, e que se entra nas regiões de \textit{Fresnel} e \textit{Fraunhofer} a forma do diagrama evidencia mais os seus lóbulos e fica mais regular. A separação entre as regiões reativa do campo próximo e região de \textit{Fresnel} e entre a região de \textit{Fresnel} e região de \textit{Fraunhofer} são definidas pelas expressões \ref{3.1} e \ref{3.2} respetivamente \parencite{Y.RahmatL.WilliamsR.Yoccarino1995}.
+
+\begin{equation} \label{3.1}
+R=\dfrac{2L^{2}}{\lambda}
+\end{equation}
+
+\begin{equation} \label{3.2}
+R=0.62\sqrt{\dfrac{L^{3}}{\lambda}}
+\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/alt_tipicas_regioes}
+\caption[Alterações típicas da forma do diagrama de radiação]{Alterações típicas do diagrama de radiação desde a reagião reativa do campo próximo à \textit{Região de Fraunhofer}. \parencite{Y.RahmatL.WilliamsR.Yoccarino1995}}
+\label{fig:alt_tipicas_regioes}
+\end{figure}
+
+
+\subsection*{Densidade de Potência}
+
+As ondas eletromagnéticas resultam da combinação de um campo magnético e de um campo elétrico que se propaga no espaço. A forma de representar a densidade direcional da quantidade de energia transferida de uma onda eletromagnética é através do vetor de \textit{Poynting}, o qual é definido, contabilizando variações temporais sinusoidais, na equação \ref{3.3}, expressa em \si{\watt\per\meter\squared}.
+
+\begin{equation} \label{3.3}
+W_{av}(x,y,z)=\dfrac{1}{2}Re[E\times H^{*}]
+\end{equation}
+
+Sendo que o vetor de \textit{Poynting} é uma densidade de potência, ao integrar a componente normal do mesmo, obtém-se na equação \ref{3.4} a potência média radiada pela antena $P_{rad}$ que atravessa uma superfície fechada S.
+
+\begin{equation} \label{3.4}
+P_{rad}=P_{av}=\oiint_S W_{rad}\cdot \,ds 
+=\dfrac{1}{2} \oiint_S Re[E\times H^{*}]\cdot \,ds
+\end{equation}
+
+Como meio de comparação, define-se a potência radiada por um radiador isotrópico na expressão \ref{3.6}, com uma densidade de potência dada por,
+
+\begin{equation} \label{3.5}
+W_{0}=\hat{a}_{r}=\hat{a}_{r}\left( \dfrac{P_{rad}}{4\pi r^{2}}\right) 
+\end{equation}
+
+\begin{equation} \label{3.6}
+P_{rad}=\oiint_S W_{rad}\cdot \,ds 
+=\int_{0}^{2\pi}\int_{0}^{\pi}\left[ \hat{a}_{r}W_{0}(r)\right] \cdot \left[ \hat{a}_{r}r^{2}sin\theta \,d\theta \,d\phi \right] = 4\pi r^{2}W_{0}
+\end{equation}
+ 
+ 
+\subsection*{Diretividade}
+A diretividade de uma antena é definida com a relação entre a intensidade de radiação numa determinada direção e a intensidade de radiação média em todos as direções. A intensidade média é igual ao quociente entre a potência total radiada pela antena e 4$\pi$ \parencite{IEEE1997}. Sendo que a intensidade de radiação $U$ é obtida pela multiplicação entre a densidade de radiação e o quadrado da distância, a diretividade $D$ de uma antena pode ser descrita pela expressão \ref{3.7}.
+
+\begin{equation} \label{3.7}
+D=\dfrac{U}{U_{0}}=\dfrac{4\pi U}{P_{rad}}
+\end{equation}
+
+No entanto, para antenas com componentes de polarização ortogonais podem-se definir diferentes diretividades parciais para cada polarização $\theta$ e $\phi$,
+
+\begin{equation} \label{3.8}
+D_{0}=D_{\theta}+D_{\phi}
+\end{equation}
+
+onde, 
+
+\begin{equation} \label{3.8a}
+D_{\theta}=\dfrac{4\pi U_{\theta}}{\left( P_{rad}\right)_{\theta}+\left( P_{rad}\right)_{\phi}}
+\end{equation}
+
+\begin{equation} \label{3.8b}
+D_{\phi}=\dfrac{4\pi U_{\phi}}{\left( P_{rad}\right)_{\theta}+\left( P_{rad}\right)_{\phi}}
+\end{equation}
+
+sendo que o índice $\theta$ e $\phi$ representa a direção que contém as componentes do campo $\theta$ e $\phi$ respetivamente.
+
+Para um radiador isotrópico, a diretividade toma o valor unitário, no entanto, em qualquer outro tipo de radiador, o valor da máxima diretividade irá ser sempre superior a ao valor unitário. Na equação \ref{3.7}, considerando o cálculo para a diretividade máxima, esta pode tomar valores inferiores a 1, o que não acontece na realidade. Com isto, uma expressão mais geral para a diretividade e para a diretividade máxima podem ser definidas na equação \ref{3.9a} e \ref{3.9b} respetivamente.
+
+\begin{equation} \label{3.9a}
+D\left( \theta ,\phi\right)=4\pi\dfrac{F\left( \theta ,\phi\right)}{\int^{2\pi}_{0}\int^{\pi}_{0}F\left( \theta ,\phi\right)sin\theta\,d\theta \,d\phi} 
+\end{equation}
+
+\begin{equation} \label{3.9b}
+D_{0}=4\pi\dfrac{F\left( \theta ,\phi\right)\mid_{max}}{\int^{2\pi}_{0}\int^{\pi}_{0}F\left( \theta ,\phi\right)sin\theta\,d\theta \,d\phi} 
+\end{equation}
+
+onde $F\left( \theta ,\phi\right)$ é uma função dos componentes do campo elétrico numa região do campo distante, que, multiplicada por uma constante, resulta a intensidade de radiação.\par 
+No entanto, a diretividade máxima também pode ser descrita em função do ângulo sólido de feixe $\Omega_{A}$,\footnote{O ângulo sólido {$\Omega$} é definido como um ângulo tridimensional no centro de uma esfera, que subentende na superfície da mesma uma área medida pelo quadrado do raio da esfera e toma valores adimensionais.}
+
+\begin{equation} \label{3.13}
+D_{0}=\dfrac{4\pi}{\dfrac{\left[ \int^{2\pi}_{0}\int^{\pi}_{0}F\left( \theta ,\phi\right) sin\theta\,d\theta \,d\phi\right]}{F\left( \theta ,\phi\right) \mid_{max}} }=\dfrac{4\pi}{\Omega_{A}} 
+\end{equation}
+
+
+\subsection*{Ganho}
+A diretividade de uma antena é uma medida que descreve apenas a propriedades direcionais da antena. Por outro lado, o ganho, para além de estar relacionado com a diretividade, também tem em conta a eficiência da antena, discutida mais à frente neste capítulo.\par
+O ganho de uma antena é um parâmetro fundamental na \textit{performance} da mesma. Este representa a eficiência em que a antena converte o sinal elétrico em ondas eletromagnéticas, que pode ser definido como ganho absoluto ou ganho relativo. O ganho absoluto de uma antena (definido na equação \ref{3.14}) representa a relação entre a intensidade de radiação radiada numa determinada direção e a intensidade de radiação que chega à antena, se a potência que chega à antena fosse radiada de forma isotrópica. No entanto, a antena isotrópica, como já foi falado neste capítulo, é um caso ideal e não corresponde à realidade. Com isto, utiliza-se o ganho relativo que relaciona a intensidade de radiação radiada de uma antena numa dada direção com a intensidade de radiação radiada a partir de outra antena na mesma direção, denominada antena de referência, quando ambas são alimentadas com a mesma potência de entrada.
+
+
+\begin{equation} \label{3.14}
+G\left( \theta ,\phi\right)=4\pi \dfrac{U\left( \theta ,\phi\right)}{P_{in}}
+\end{equation}
+
+
+Como falado mais à frente neste capítulo, a potência radiada $P_{rad}$ está relacionada com a potência de entrada $P_{in}$ da seguinte forma,
+
+\begin{equation} \label{3.15}
+P_{rad}=e_{cd}P_{in}
+\end{equation}
+
+sendo que $e_{cd}$ representa a eficiência de radiação da antena. \par 
+A partir da equação \ref{3.15}, usando a \ref{3.14}, vem,
+
+\begin{equation} \label{3.16}
+G\left( \theta ,\phi\right)=e_{cd} \left[ 4\pi \dfrac{U\left( \theta ,\phi\right)}{P_{rad}}\right] 
+\end{equation}
+
+Que está relacionado com a diretividade (equação \ref{3.7}) da seguinte forma,
+
+\begin{equation} \label{3.17}
+G\left( \theta ,\phi\right)=e_{cd}D\left( \theta ,\phi\right)
+\end{equation}
+
+No entanto, a equação \ref{3.17} não contempla perdas quando o elemento da antena está conectado a um guia, o que provoca perdas indesejadas, através de reflexões. Isto pode ser solucionado com a introdução do termo $e_{r}$ que está relacionado com o coeficiente de reflexão,
+
+\begin{equation} \label{3.18}
+e_{r}=\left( 1-\vert\Gamma\vert^{2}\right) 
+\end{equation}
+
+Assim sendo, pode-se introduzir o conceito de ganho realizado $G_{re}$ que tem em conta as perdas por reflexão da antena.
+
+\begin{equation} \label{3.19}
+G_{re}\left( \theta ,\phi\right)=e_{r}G\left( \theta ,\phi\right)=\left( 1-\vert\Gamma\vert^{2}\right)G\left( \theta ,\phi\right)=e_{r}e_{cd}D\left( \theta ,\phi\right) 
+\end{equation}
+
+É de notar, que se a antena for adaptada ao guia, ou seja, se a impedância de entrada for igual à impedância característica ($\vert\Gamma\vert =0$), então, $G=G_{re}$.
+
+
+\subsection*{Largura de Banda}
+A largura de banda é uma gama de frequências, em redor de uma frequência central $f_{c}$, para a qual as caraterísticas da antena se mantêm com um valor aceitável relativamente aos valores obtidos para a frequência central. A largura de banda é, frequentemente, um dos parâmetros determinantes usados para dimensionar a antena.\par
+Dependendo das necessidades de operação da antena que é utilizada, a largura de banda será limitada por certos fatores que são falados neste capítulo, como a impedância de entrada, ganho, forma do diagrama de radiação e polarização. Na prática, a largura de banda pode ser representada de duas formas,
+\begin{itemize}
+\item Antenas de banda larga, que apresentam a caraterística da frequência mais alta ser maior ou igual que o dobro da menor frequência. A largura de banda é representada pela razão entre estas frequências. Por exemplo, uma razão de 5:1 significa que a frequência mais alta é 4 vezes maior que a menor frequência.
+\item Antenas de banda estreita, que são caraterizadas por apresentarem uma largura de banda muito menor que a frequência central. Neste caso, a largura de banda é expressa em percentagem. Por exemplo, uma percentagem de 10\% de banda larga significa que é aceitável que a diferença da menor frequência para a frequência central, e consequentemente a diferença da frequência central para a maior frequência tome um valor que seja metade dos 10\% para cada lado de $f_{c}$, ou seja, 5\% de $f_{c}$ para cada lado.
+\end{itemize}
+
+
+\subsection*{Polarização}
+A polarização da antena é definida como a polarização da onda radiada pela mesma, que é definida como a direção do campo elétrico da onda radiada, que se nada for dito em contrário, se considera na direção da máxima radiação. No entanto, na prática, a polarização da onda radiada depende da direção de propagação, ou seja, podem existir diferentes polarizações em zonas diferentes do diagrama de radiação.\par
+A polarização pode ser classificada como linear, circular ou elíptica. Uma polarização linear é caraterizada se o vetor que descreve o campo elétrico tiver sempre a mesma direção à medida que a onda se propaga. A polarização circular é caraterizada pelo vetor do campo elétrico que gira numa circunferência no plano $xy$ à medida que a onda se propaga, o que difere para a polarização elíptica, no facto das duas componentes do vetor campo elétrico girarem numa elipse no plano $xy$. Pode-se definir a polarização linear e circular como casos particulares da polarização elíptica (Figura \ref{fig:polari}), em que as componentes do campo elétrico são múltiplos de $\pi$ na polarização linear e têm módulos iguais e um desfasamento múltiplo impar de $\dfrac{\pi}{2}$ na polarização circular.\par 
+%O campo instantâneo 
+%Para as diferentes polarizações, a relação tempo-fase $\Delta\phi$ é diferente, \par 
+%Polarização linear,
+
+%\begin{equation} \label{3.23}
+%\Delta\phi = \phi_{y}-\phi_{x}=n\pi, \quad n=0,1,2,3,...
+%\end{equation}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{chapters/ch3/assets/polari}
+\caption[Alterações típicas da forma do diagrama de radiação]{Rotação de uma onda eletromagnética com polarização elíptica para $z=0$(Figura 2.23 \cite{Balanis2016}).}
+\label{fig:polari}
+\end{figure}
+
+\subsubsection*{Perdas de Polarização}
+As perdas de polarização ocorrem quando a polarização da antena recetora é diferente à da onda incidente. Devido a este fator, a potência extraída pela antena do sinal recebido não vai ser máxima.\par 
+Assumindo que o campo elétrico da onda incidente pode ser escrito da seguinte forma,
+
+\begin{equation} \label{3.23}
+\mathbf{E_{i}}=\hat{\rho}_{w}E_{i}
+\end{equation}
+
+onde $\hat{\rho}_{w}$ é o vetor unitário da onda. Então, a polarização do campo elétrico da antena recetora pode ser escrito da seguinte forma,
+
+\begin{equation} \label{3.24}
+\mathbf{E_{a}}=\hat{\rho}_{a}E_{a}
+\end{equation}
+
+As perdas de polarização podem ser definidas pelo fator de perdas de polarização $PLF$, como na expressão \ref{3.25}.
+
+\begin{equation} \label{3.25}
+PLF=\vert\hat{\rho}_{w}\cdot \hat{\rho}_{a}\vert^{2}=\vert cos\psi_{p}\vert^{2}
+\end{equation}
+
+onde $\psi_{p}$ é o ângulo entre os dois vetores unitários.
+
+
+%\subsection*{Impedância de Entrada}
+
+
+\subsection*{Eficiência}
+\subsubsection*{Eficiência da Antena}
+A eficiência da antena $e_{0}$ descreve perdas nos terminais de entrada e dentro da estrutura da antena. A figura \ref{fig:perdas_antena} representa os terminais de referência da antena e as suas perdas: \begin{itemize}
+\item Perdas por reflexão devido à não adaptação entre o guia e a antena
+\item Perdas por condução e dielétrico
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/perdas_antena}
+\caption[Terminais de referência e perdas na antena]{Terminais de referência e perdas na antena (Figura 2.22 do livro \cite{Balanis2016})}. 
+\label{fig:perdas_antena}
+\end{figure}
+
+Ou seja, de modo geral, a eficiência pode ser escrita da seguinte forma,
+
+\begin{equation} \label{3.20}
+e_{0}=e_{r}e_{c}e_{d}
+\end{equation}
+
+onde \par 
+$e_{0}$:"eficiência total" \par
+$e_{r}$:"eficiência considerando perdas por reflexão $\left( 1-\vert\Gamma\vert^{2}\right)$"\par
+$e_{c}$:"eficiência considerando perdas por condução"\par
+$e_{d}$:"eficiência do dielétrico"\par
+$\Gamma$:"coeficiente de reflexão nos terminais de entrada da antena"\par 
+$\left[ \Gamma=(Z_{in}-Z_{0})/(Z_{in}+Z_{0})\right] $ com $ Z_{in}$: impedância de entrada e $Z_{0}$: impedância característica do guia.\par 
+com a relação de onda estacionária ROE,
+\begin{equation} \label{3.21}
+ROE=\dfrac{1+\vert\Gamma\vert}{1-\vert\Gamma\vert}
+\end{equation}
+
+Por norma, $e_{c}$ e $e_{d}$ são muito difíceis de calcular, mas podem ser determinados experimentalmente. Com isto, é comum substituir-se $e_{c}e_{d}$ por $e_{cd}$ e representar-se a eficiência total $e_{0}$ por,
+
+\begin{equation} \label{3.22}
+e_{0}=e_{r}e_{cd}=e_{cd}\left( 1-\vert\Gamma\vert^{2}\right)
+\end{equation}
+
+
+%\subsubsection*{Eficiência do Feixe}
+%Outro parâmetro para definir a qualidade de transmissão e receção é a eficiência de feixe $BE$.
+
+%\subsection*{Máxima Diretividade e Máxima Área Efetiva}
+
+
+
+\subsection*{Equação Radar} \label{subcap:eqradar}
+A equação radar pode ser definida através do conhecimento da \gls{RCS} do alvo.\footnote{\gls{RCS} é uma representação da capacidade de um alvo de refletir um sinal radar na direção do recetor. Em regra a \gls{RCS} de um alvo é comparada com a força de um sinal refletido isotrópicamente de uma esfera perfeitamente lisa com uma área de secção transversal de $1m^{2}$ }\par 
+A equação radar relaciona a potência recebida com a potência transmitida depois de ter sido refletida num alvo com uma \gls{RCS} $\sigma$
+
+\begin{equation} \label{3.26}
+\dfrac{P_{r}}{P_{t}}=e_{cdt}e_{cdr}\sigma \dfrac{D_{t}\left( \theta_{t},\phi_{t}\right)D_{r}\left( \theta_{r},\phi_{r}\right) }{4\pi}\left( \dfrac{\lambda}{4\pi R_{1}R_{2}}\right)^{2} 
+\end{equation}
+
+com \gls{RCS},
+
+\begin{equation} \label{3.27}
+\sigma =\lim_{R\to\infty}\left[ 4\pi R^{2}\dfrac{W_{s}}{W_{i}}\right] 
+\end{equation}
+
+onde \par 
+$e_{cdr}$:"eficiência considerando perdas dielétrico e por condução no recetor" \par
+$e_{cdt}$:"eficiência considerando perdas dielétrico e por condução no transmissor" \par
+$R$:"distância do recetor ao alvo" \par
+$W_{i}$:"Densidade de potência radiada" \par
+$W_{s}$:"Densidade de potência recebida" \par
+
+Se considerarmos perdas por reflexão vem,  
+
+\begin{equation} \label{3.28}
+\dfrac{P_{r}}{P_{t}}=e_{cdt}e_{cdr}\left( 1-\vert\Gamma_{t}\vert^{2}\right)\left( 1-\vert\Gamma_{r}\vert^{2}\right)\sigma \dfrac{D_{t}\left( \theta_{t},\phi_{t}\right)D_{r}\left( \theta_{r},\phi_{r}\right) }{4\pi}\times\left( \dfrac{\lambda}{4\pi R_{1}R_{2}}\right)^{2}\vert\hat{\rho}_{w}\cdot \hat{\rho}_{a}\vert^{2}
+\end{equation}
+
+onde \par 
+$\Gamma_{r}$:"coeficiente de reflexão nos terminais de entrada da antena de receção" \par
+$\Gamma_{t}$:"coeficiente de reflexão nos terminais de entrada da antena de transmissão" \par
+$\hat{\rho}_{w}$:"vetor unitário de polarização nas ondas refletidas"\par
+$\hat{\rho}_{r}$:"vetor unitário de polarização na antena de receção"\par
+
+No entanto, se as antenas estiverem com polarização adaptada para a máxima radiação direcional e receção, a equação \ref{3.28} fica reduzida a,
+
+\begin{equation} \label{3.29}
+\dfrac{P_{r}}{P_{t}}=\sigma \dfrac{G_{0t}G_{0r}}{4\pi}\left( \dfrac{\lambda}{4\pi R_{1}R_{2}}\right)^{2} 
+\end{equation}
+
+
+%\subsection*{\textit{Radar Cross Section}}
+
+
+
+%\subsection*{Temperatura da Antena}
+
+
+
+\section{Simulação de uma Antena}
+Conhecendo os parâmetros fundamentais de uma antena, descritos ao desenrolar deste capítulo, pode-se concluir que um dos principais problemas quando se juntam duas antenas como no caso desta atividade prática, é a interseção do diagrama de radiação, que se verifica no próximo subcapítulo com a figura \ref{fig:yagi}.\par
+É possível obter maior diretividade numa antena e consequentemente menos interação entre os diagramas das mesma, no entanto alterar a configuração duma antena pode inserir lóbulos secundários entre outros problemas. Pode-se ainda melhorar a diretividade modificando a sua configuração elétrica a partir da geometria dos elementos radiantes.\par
+Posto isto, considerando a experiência realizada, descrita no Capítulo \ref{chap:Chapter5}, é necessário compreender as propriedades da antena utilizada de modo a retirar conclusões confiáveis. Como falado, uma das propriedades mais importantes neste caso é o diagrama de radiação, que permite observar a diretividade da antena, visto que se o sinal direto é recebido nas duas antenas por estas serem pouco diretivas, torna a situação muito mais difícil, e os resultados muito menos fidedignos.
+
+\subsection{Para Sinais DVB-T}
+As antenas utilizadas para a experiência foram duas \textit{One for all Yagi-Uda} sv9354 para \gls{DVB-T} de $24 dB$.\par 
+Para fazer a simulação do diagrama de radiação da antena utilizada, foi utilizada a \textit{toolbox antenna designer} do \textit{Matlab}, onde foram inseridas as caraterísticas da mesma obtendo como resultado a figura \ref{fig:yagi}. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.6]{chapters/ch3/assets/yagi}
+\caption[Diagrama de radiação antena Yagi-Uda]{Diagrama de radiação da antena Yagi-Uda}
+\label{fig:yagi}
+\end{figure}
+
+Com o diagrama de radiação da figura \ref{fig:yagi} que se encontra com a antena no sentido do eixo dos zz, ao duplicar e direcionar duas antenas para sentidos opostos ficamos com a configuração proposta para a experiência. Com isto, verificamos que há muita interação entre os lóbulos posteriores de cada antena, o que vai degradar muito o sinal. É então necessário ter este problema em consideração quando se tirar conclusões do trabalho.

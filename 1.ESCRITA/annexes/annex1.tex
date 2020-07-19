@@ -1,0 +1,33 @@
+% Anexo 1
+
+\chapter{Função de ambiguidade para um pulso FM} %
+
+\label{Annex1} % para referenciares o anexo em alguma parte da tese usa o comando \ref{Annex1}
+
+Código sugerido pelo MATLAB para criar função de ambiguidade para um pulso FM consoante as caraterísticas do sinal:
+
+\begin{verbatim}
+clc
+close all
+clear all
+
+Rmax = 15e3;
+Rres = 1500;
+c = 3e8;
+prf = c/(2*Rmax);
+bw = c/(2*Rres);
+fs = 2*bw;
+fc = 1e9;
+
+lfmwaveform = phased.LinearFMWaveform('SampleRate',fs,'SweepBandwidth',bw,'PRF',prf,'PulseWidth',5/bw);
+bw_lfm = bandwidth(lfmwaveform);
+wav = lfmwaveform();
+deltav_lfm = dop2speed(20e3,c/fc);
+[afmag_lfm,delay_lfm,doppler_lfm] = ambgfun(wav,lfmwaveform.SampleRate,lfmwaveform.PRF);
+
+subplot(2,1,2)  
+surf(delay_lfm*1e6,doppler_lfm/1e3,afmag_lfm,'LineStyle','none'); 
+axis tight; grid on; view([140,35]); colorbar;
+xlabel('Delay \tau (us)');ylabel('Doppler f_d (kHz)');
+title('FM Pulse Waveform Ambiguity Function');
+\end{verbatim}
